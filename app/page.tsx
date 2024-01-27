@@ -9,6 +9,18 @@ const content = [
     link: "/reordering",
     display: "Reordering Layout Animation",
   },
+  {
+    link: "/animate-presence",
+    display: "Enter and Exit Animation",
+  },
+  {
+    link: "/trello-checklist",
+    display: "Event Based Animation",
+  },
+  {
+    link: "/dock",
+    display: "MacOS dock Animation",
+  },
 ];
 
 export default function Home() {
@@ -19,7 +31,7 @@ export default function Home() {
         <div className="flex flex-col gap-5 text-lg  pt-5">
           {content.map((item, index) => {
             return (
-              <div className="hover:italic hover:text-white/50">
+              <div key={index} className="hover:italic hover:text-white/50">
                 <span>{index + 1}. </span>
                 <Link href={item.link}>
                   <span>{item.display}</span>
